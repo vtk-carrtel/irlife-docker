@@ -36,7 +36,7 @@ for time in range(0,1000):
     press = pressure.get_currentValue()
 
   # write to influx DB
-  with InfluxDBClient(url="https://europe-west1-1.gcp.cloud2.influxdata.com", token="XOZbZ5m2L1TjmjJ3u8e6cQLY6TbxZkh-loFmSeiANC6LOZNedgg6iz1VqiOtMrH2B42wEAJQ8Z5GVMCUdzWiRQ==",
+  with InfluxDBClient(url="https://europe-west1-1.gcp.cloud2.influxdata.com", token=token,
                       org=org) as client:
     write_api = client.write_api(write_options=SYNCHRONOUS)
 
